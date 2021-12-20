@@ -94,7 +94,10 @@ int main()
     if (result.size()==5)
     {
       // strip the last three digits from the string
-      //result[0].erase(result[0].length()-3);
+      result[0].erase(result[0].length()-3);
+      // add initial time Mon Nov 15 09:45:17 CET 2021
+      //result[0].add(1636965917);
+      //result[0] = result[0]+ 1636965917;
       m[stoi(result[0])] = stoll(result[1]);
     }
     else
@@ -113,13 +116,13 @@ int main()
 
   // let's test our find function
   vector<int> timestamps;
-  timestamps.push_back(1463292000); // <-- before beginning
-  timestamps.push_back(1463292010);
-  timestamps.push_back(1463292378);
-  timestamps.push_back(1463292132);
-  timestamps.push_back(1463292095);
-  timestamps.push_back(1470895189);
-  timestamps.push_back(1470895190);
+  timestamps.push_back(1637003697-1636965917); // this is Mon Nov 15 2021 19:14:57 GMT+0000 minus timestamp of xls
+  // timestamps.push_back(1463292010);
+  // timestamps.push_back(1463292378);
+  // timestamps.push_back(1463292132);
+  // timestamps.push_back(1463292095);
+  // timestamps.push_back(1470895189);
+  // timestamps.push_back(1470895190);
   for( vector<int>::iterator itr = timestamps.begin(); itr != timestamps.end(); ++itr )
   {
     cout << "find value " << *itr << '\n';
