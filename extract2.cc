@@ -133,6 +133,7 @@ int main()
     cout << "find value (add three digits to compare to csv) " << *itr << '\n';
     double t10 = find_t10(*itr, m );
     cout << "temperature for time " << *itr << " is: " << t10 << '\n';
+    printf("floats: %4.2f \n",t10);
   }
 
   return 0;
